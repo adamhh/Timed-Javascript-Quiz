@@ -3,9 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <header class="p-2 bg-warning">
+        <strong><a href="highscores.html">Hall of JS Knowledge</a></strong>
+        <span id="timer" class="float-right mr-2">0</span>
+    </header>
+          
+    <main>
+        <div class="container py-5 " id="home">
+            <div class="row justify-content-center">
+                <div class="col-10 border border-warning text-center">
+                    <h1>JavaScript Knowledge Quiz!</h1></br>
+                    <h3>Answer these questions about JavaScript</h3></br>
+                    <p>Test your basic knowledge with this timed quiz!</p>
+                    <p>Just remember every wrong choice costs you time!</p>
+                    <button type="button" id="startBtn" class="btn bg-primary">Start</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="container py-5 d-none" id="quiz">
+        <div class="row justify-content-center">
+            <div class="col-10" id="QA-block">
+                <h3 id="questions" class="mb-4">QUESTION</h3>
+                <ul id="answers" class="list-unstyled">
+                    <li class="answerChoice">A) </li>
+                    <li class="answerChoice">B) </li>
+                    <li class="answerChoice">C) </li>
+                    <li class="answerChoice">D) </li>
+                </ul>
+                <p class="feedback"></p>
+            </div>
+        </div>
+    </div>
+    <div class="container py-5 d-none" id="submit-score">
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <h2>Finished!</h2>
+                <p id="user-score"> </p>
+                <form class="form-group">
+                    <label for="new-score">Enter your name: </label>
+                    <input type="text" id="userName">
+                    <button type="button" class="btn btn-info btn-sm submitBtn">Join the Chosen</button>
+                </form>
+            </div>
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+crossorigin="anonymous"></script>
+<script scr="script.js"></script>
+
 </body>
+
 </html>

@@ -1,14 +1,13 @@
 // Get html elements
 var startBtn = document.getElementById("startBtn");
 var submitBtn = document.querySelector("button.submitBtn");
-var secondsLeft = (questions.Length * 20 + 1);                                          
+var secondsLeft = 120;                                          
 var timerEl = document.getElementById("timer");
 var submitscoreEl = document.querySelector("#submit-score");
 var userScoreEl = document.getElementById("user-score");
 var userNameInput;
 var questionHead = document.getElementById("questions");
 var answerChoices = document.getElementById("answers");
-
 var questionNumber = -1;
 var answer;
 //Add questions for quiz
@@ -29,7 +28,7 @@ function startTimer() {
 function setTimer() {
     var countDown = setInterval(function () {
         secondsLeft--;
-        timerEl.textContent = "secondsLeft";
+        timerEl.textContent = secondsLeft;
         
         if (secondsLeft === 0 || questionNumber === questions.Length) {
             clearInterval(countDown);

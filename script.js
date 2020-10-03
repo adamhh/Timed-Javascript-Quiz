@@ -1,7 +1,6 @@
 // Get html elements
 var startBtn = document.getElementById("startBtn");
-var submitBtn = document.querySelector("button.submitBtn");
-var secondsLeft = (questions.length * 20 + 1);                                          
+var submitBtn = document.querySelector("button.submitBtn");                                       
 var timerEl = document.getElementById("timer");
 var submitscoreEl = document.querySelector("#submit-score");
 var userScoreEl = document.getElementById("user-score");
@@ -11,7 +10,6 @@ var answerChoices = document.getElementById("answers");
 var questionNumber = -1;
 var answer;
 
-//Start timer
 var questions = [
     {
         title: "Inside which HTML element do we put the JavaScript?",
@@ -44,9 +42,9 @@ var questions = [
     },
 ];
 
+var secondsLeft = (questions.length * 20 + 1);  
 
-
-
+//Start timer
 function startTimer() {
  
     document.getElementById("home").classList.add('d-none');
@@ -91,7 +89,7 @@ function makeQuestions() {
 function displayScore() {
     document.getElementById("quiz").classList.add('d-none');
     document.getElementById("submit-score").classList.remove('d-none');
-    userScoreElement.textContent = "FINAL SCORE: " + secondsLeft + ".";
+    userScoreEl.textContent = "FINAL SCORE: " + secondsLeft + ".";
 }
 
 
@@ -111,6 +109,7 @@ var newScore = {
         name: userNameInput,
         score: secondsLeft
     };
+    console.log(secondsLeft)
     // check if there are scores in local storage first and take value
     //if not, make a blank array
     var highScores = JSON.parse(localStorage.getItem("highScores") || "[]");
@@ -147,4 +146,5 @@ answerChoices.addEventListener("click", function (event) {
     }    
     makeQuestions();
 });
+
 

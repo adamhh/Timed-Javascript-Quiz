@@ -42,6 +42,7 @@ var questions = [
     },
 ];
 
+
 var secondsLeft = (questions.length * 20 + 1);  
 
 //Start timer
